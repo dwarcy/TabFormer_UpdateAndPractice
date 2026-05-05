@@ -114,7 +114,7 @@ def main(args):
         # do_eval=args.do_eval,
         # evaluation_strategy="epoch",
         prediction_loss_only=True,
-        overwrite_output_dir=True,
+        # overwrite_output_dir=True,
         # eval_steps=10000
     )
 
@@ -131,7 +131,8 @@ def main(args):
     else:
         model_path = args.output_dir
 
-    trainer.train(model_path=model_path)
+    # trainer.train(model_path=model_path)
+    trainer.train()
 
 
 if __name__ == "__main__":
