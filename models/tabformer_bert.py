@@ -2,9 +2,13 @@ import torch
 from torch import nn
 from torch.nn import CrossEntropyLoss
 
-from transformers.modeling_bert import ACT2FN, BertLayerNorm
-from transformers.modeling_bert import BertForMaskedLM
-from transformers.configuration_bert import BertConfig
+# from transformers.modeling_bert import ACT2FN, BertLayerNorm
+from transformers.activations import ACT2FN
+from torch.nn import LayerNorm as BertLayerNorm
+# from transformers.modeling_bert import BertForMaskedLM
+from transformers import BertForMaskedLM
+# from transformers.configuration_bert import BertConfig
+from transformers import BertConfig
 from models.custom_criterion import CustomAdaptiveLogSoftmax
 
 
