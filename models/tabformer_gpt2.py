@@ -1,7 +1,7 @@
 from torch.nn import CrossEntropyLoss
 
-from transformers.modeling_gpt2 import GPT2LMHeadModel
-
+# from transformers.modeling_gpt2 import GPT2LMHeadModel
+from transformers import GPT2LMHeadModel
 
 class TabFormerGPT2LMHeadModel(GPT2LMHeadModel):
     def __init__(self, config, vocab):
